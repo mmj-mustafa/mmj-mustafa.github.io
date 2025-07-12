@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Muhammad Mustafa - QC/QA Electrical Engineer</title>
+  <title>Muhammad Mustafa - QC/QA Electrical Engineer Portfolio</title>
   <style>
-    /* Reset & base */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    /* Reset */
     * {
       box-sizing: border-box;
     }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9fafb;
       margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #e8f1f2;
       color: #222;
       line-height: 1.6;
       font-size: 16px;
@@ -23,119 +25,162 @@
       transition: color 0.3s ease;
     }
     a:hover {
-      color: #21867a;
+      color: #1f6f78;
+    }
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     /* Container */
     .container {
-      max-width: 900px;
-      margin: 40px auto 60px;
-      background: #fff;
-      padding: 30px 40px;
-      border-radius: 10px;
-      box-shadow: 0 10px 20px rgb(0 0 0 / 0.08);
+      max-width: 1000px;
+      margin: 40px auto 80px;
+      padding: 0 20px;
     }
 
-    /* Header */
+    /* Header - Hero */
     header {
+      background: #264653;
+      color: white;
+      padding: 50px 20px 70px;
       text-align: center;
-      padding-bottom: 20px;
-      border-bottom: 3px solid #2a9d8f;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+      position: relative;
     }
     header img {
-      width: 140px;
-      height: 140px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
+      border: 5px solid #2a9d8f;
       object-fit: cover;
-      border: 4px solid #2a9d8f;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
     header h1 {
-      font-size: 2.5rem;
       margin: 0;
-      color: #264653;
-    }
-    header p {
-      margin: 6px 0;
+      font-size: 3rem;
       font-weight: 600;
-      color: #555;
-      font-size: 1rem;
+      letter-spacing: 1.3px;
     }
-    header p a {
+    header p.tagline {
+      margin: 10px 0 30px;
+      font-weight: 300;
+      font-size: 1.25rem;
+      color: #a8c0c8;
+    }
+    /* Download Button */
+    .btn-download {
+      background: #2a9d8f;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 30px;
       font-weight: 600;
-      color: #2a9d8f;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 8px rgb(42 157 143 / 0.5);
+      display: inline-block;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .btn-download:hover {
+      background: #1f6f78;
+      box-shadow: 0 6px 12px rgb(31 111 120 / 0.7);
     }
 
-    /* Section Titles */
-    h2 {
+    /* Sections */
+    section {
+      background: white;
+      border-radius: 15px;
+      padding: 30px 40px;
+      margin-top: -60px;
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.07);
+      position: relative;
+      z-index: 1;
+      margin-bottom: 40px;
+    }
+    section h2 {
+      font-size: 2rem;
+      font-weight: 600;
       color: #264653;
+      margin-bottom: 25px;
       border-bottom: 3px solid #2a9d8f;
       padding-bottom: 8px;
-      margin-bottom: 25px;
-      font-weight: 700;
-      font-size: 1.8rem;
     }
-
-    /* Subtitles */
-    h3 {
-      margin-top: 0;
-      color: #1d3557;
+    section h3 {
       font-weight: 600;
-      margin-bottom: 10px;
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: #1d3557;
     }
-
-    /* Paragraph */
     p {
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
-
-    /* Lists */
     ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin-bottom: 25px;
+      list-style: disc inside;
+      margin: 0 0 25px 0;
+      padding-left: 0;
     }
     li {
       margin-bottom: 8px;
     }
 
-    /* Contact Info Footer */
+    /* Experience cards */
+    .experience-item {
+      background: #f4f7f6;
+      border-radius: 10px;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 10px rgb(0 0 0 / 0.05);
+    }
+    .experience-item p.duration {
+      font-style: italic;
+      color: #555;
+      margin-top: -10px;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    /* Skills & Languages grid */
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 600px) {
+      .grid-two {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Footer */
     footer {
       text-align: center;
-      padding-top: 30px;
-      border-top: 3px solid #2a9d8f;
-      font-size: 1rem;
+      margin: 40px 0 60px;
       color: #555;
+      font-weight: 600;
+      font-size: 1rem;
     }
     footer a {
       margin: 0 15px;
-      font-weight: 600;
     }
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      .container {
-        margin: 20px 15px 40px;
-        padding: 20px;
-      }
-      header h1 {
-        font-size: 2rem;
-      }
-      h2 {
-        font-size: 1.5rem;
-      }
-    }
   </style>
 </head>
 <body>
+  <header>
+    <img src="myphoto.jpg" alt="Muhammad Mustafa" />
+    <h1>Muhammad Mustafa</h1>
+    <p class="tagline">QC/QA Electrical Engineer | Riyadh, Saudi Arabia</p>
+    <a href="resume.pdf" class="btn-download" download>Download Resume</a>
+    <p style="margin-top: 20px; font-weight: 400; font-size: 0.95rem;">
+      <a href="mailto:eengg.mustafa@gmail.com" style="color:#a8c0c8;">eengg.mustafa@gmail.com</a> | 
+      <a href="tel:+966531295136" style="color:#a8c0c8;">+966 531 295 136</a> | 
+      Transferrable IQAMA
+    </p>
+  </header>
+
   <div class="container">
-    <header>
-      <img src="myphoto.jpg" alt="Muhammad Mustafa" />
-      <h1>Muhammad Mustafa</h1>
-      <p>QC/QA Electrical Engineer</p>
-      <p>Riyadh, Saudi Arabia | <a href="tel:+966531295136">+966 531 295 136</a> | <a href="mailto:eengg.mustafa@gmail.com">eengg.mustafa@gmail.com</a> | Transferrable IQAMA</p>
-      <p>Portfolio: <a href="https://mmj-mustafa.github.io" target="_blank" rel="noopener">mmj-mustafa.github.io</a></p>
-    </header>
 
     <section>
       <h2>Professional Summary</h2>
@@ -145,9 +190,10 @@
     <section>
       <h2>Experience</h2>
 
-      <div>
-        <h3>QC/QA Electrical Engineer | MAS Engineering and Construction Ltd., Riyadh | PRIME Project Riyadh</h3>
-        <p><em>1+ Years</em></p>
+      <div class="experience-item">
+        <h3>QC/QA Electrical Engineer</h3>
+        <p><strong>MAS Engineering and Construction Ltd., Riyadh | PRIME Project Riyadh</strong></p>
+        <p class="duration">1+ Years</p>
         <ul>
           <li>Executed QA/QC activities per project specifications, SEC standards, and ISO 9001:2015.</li>
           <li>Prepared and reviewed MAR, MIR, WIR, MTS, and ITP documents.</li>
@@ -162,9 +208,10 @@
         </ul>
       </div>
 
-      <div>
-        <h3>QC Electrical Inspector | Power Solutions Pvt. Ltd.</h3>
-        <p><em>2 Years</em></p>
+      <div class="experience-item">
+        <h3>QC Electrical Inspector</h3>
+        <p><strong>Power Solutions Pvt. Ltd.</strong></p>
+        <p class="duration">2 Years</p>
         <ul>
           <li>Performed inspections for electrical systems in power generation/distribution projects.</li>
           <li>Implemented ITPs and verified compliance through load testing.</li>
@@ -173,9 +220,10 @@
         </ul>
       </div>
 
-      <div>
-        <h3>Trainee Engineer | Power Solutions Pvt. Ltd.</h3>
-        <p><em>6 Months</em></p>
+      <div class="experience-item">
+        <h3>Trainee Engineer</h3>
+        <p><strong>Power Solutions Pvt. Ltd.</strong></p>
+        <p class="duration">6 Months</p>
         <ul>
           <li>Assisted in FAT of DBs, panels, and switchgear; conducted functionality tests.</li>
           <li>Tested earth continuity and phase sequence for compliance with safety standards.</li>
@@ -186,9 +234,8 @@
 
     <section>
       <h2>Education</h2>
-      <ul>
-        <li>BS Electrical Engineering | Gujranwala Institute of Future Technology (GIFT University)</li>
-      </ul>
+      <p><strong>BS Electrical Engineering</strong></p>
+      <p>Gujranwala Institute of Future Technology (GIFT University)</p>
     </section>
 
     <section>
@@ -211,20 +258,24 @@
 
     <section>
       <h2>Skills</h2>
-      <ul>
-        <li>Electrical Testing & QA Procedures</li>
-        <li>WIR, MIR, MAR, ITP Documentation</li>
-        <li>AutoCAD Markups</li>
-        <li>Inspection & Commissioning</li>
-        <li>NCR/SOR/RFI Management</li>
-        <li>Fire Stop & Safety Compliance</li>
-        <li>QA/QC Logs & Document Control</li>
-        <li>FAT/SAT Supervision</li>
-        <li>Root Cause Analysis & CAPA</li>
-        <li>ISO 9001 Quality Management</li>
-        <li>Cross-Disciplinary Coordination</li>
-        <li>Problem-Solving & Leadership</li>
-      </ul>
+      <div class="grid-two">
+        <ul>
+          <li>Electrical Testing & QA Procedures</li>
+          <li>WIR, MIR, MAR, ITP Documentation</li>
+          <li>AutoCAD Markups</li>
+          <li>Inspection & Commissioning</li>
+          <li>NCR/SOR/RFI Management</li>
+          <li>Fire Stop & Safety Compliance</li>
+        </ul>
+        <ul>
+          <li>QA/QC Logs & Document Control</li>
+          <li>FAT/SAT Supervision</li>
+          <li>Root Cause Analysis & CAPA</li>
+          <li>ISO 9001 Quality Management</li>
+          <li>Cross-Disciplinary Coordination</li>
+          <li>Problem-Solving & Leadership</li>
+        </ul>
+      </div>
     </section>
 
     <section>
@@ -235,12 +286,12 @@
         <li>Basic Arabic</li>
       </ul>
     </section>
-
-    <footer>
-      <a href="mailto:eengg.mustafa@gmail.com">Email</a> | 
-      <a href="https://www.linkedin.com/in/mustafajamshaid" target="_blank" rel="noopener">LinkedIn</a> | 
-      <a href="https://mmj-mustafa.github.io" target="_blank" rel="noopener">Portfolio</a>
-    </footer>
   </div>
+
+  <footer>
+    <a href="mailto:eengg.mustafa@gmail.com" aria-label="Email">Email</a> | 
+    <a href="https://www.linkedin.com/in/mustafajamshaid" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a> | 
+    <a href="https://mmj-mustafa.github.io" target="_blank" rel="noopener" aria-label="Portfolio">Portfolio</a>
+  </footer>
 </body>
 </html>
