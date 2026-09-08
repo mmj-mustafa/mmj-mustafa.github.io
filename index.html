@@ -1,375 +1,868 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Muhammad Mustafa - QC/QA Electrical Engineer Portfolio</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Muhammad Mustafa — Electrical Engineer, QA/QC | Testing &amp; Commissioning</title>
+<meta name="description" content="Muhammad Mustafa — QA/QC Electrical Engineer based in Al Khobar, Saudi Arabia. LV/MV power distribution, switchgear, testing &amp; commissioning across KSA/GCC construction and EPC projects." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EBEAE1;
+    --paper-panel:#F7F6EF;
+    --ink:#1B2230;
+    --ink-soft:#4A5262;
+    --line:#C7C6B8;
+    --line-strong:#9FA08F;
+    --amber:#D98E2B;
+    --amber-deep:#B5731A;
+    --teal:#2E6E63;
+    --teal-soft:#DCE9E4;
+    --navy:#182233;
+    --navy-2:#222E44;
+    --radius-tag: 3px;
+    --maxw: 980px;
+  }
 
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #e8f1f2;
-      color: #222;
-      line-height: 1.6;
-      font-size: 16px;
-    }
-    a {
-      color: #2a9d8f;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    a:hover {
-      color: #1f6f78;
-    }
-    img {
-      max-width: 100%;
-      display: block;
-    }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+  }
 
-    .container {
-      max-width: 1000px;
-      margin: 40px auto 80px;
-      padding: 0 20px;
-    }
+  body{
+    margin:0;
+    background:
+      linear-gradient(var(--paper) 0 0);
+    background-color:var(--paper);
+    background-image:
+      linear-gradient(90deg, rgba(0,0,0,0.035) 1px, transparent 1px),
+      linear-gradient(rgba(0,0,0,0.035) 1px, transparent 1px);
+    background-size: 28px 28px;
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:16px;
+    line-height:1.65;
+  }
 
-    header {
-      background: #264653;
-      color: white;
-      padding: 50px 20px 70px;
-      text-align: center;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
-      position: relative;
-    }
-    header img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 5px solid #2a9d8f;
-      object-fit: cover;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-      font-weight: 600;
-      letter-spacing: 1.3px;
-    }
-    header p.tagline {
-      margin: 10px 0 30px;
-      font-weight: 300;
-      font-size: 1.25rem;
-      color: #a8c0c8;
-    }
-    .btn-download {
-      background: #2a9d8f;
-      color: white;
-      padding: 12px 30px;
-      border-radius: 30px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      box-shadow: 0 4px 8px rgb(42 157 143 / 0.5);
-      display: inline-block;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-    .btn-download:hover {
-      background: #1f6f78;
-      box-shadow: 0 6px 12px rgb(31 111 120 / 0.7);
-    }
+  a{ color:var(--teal); text-decoration-thickness:1px; text-underline-offset:3px; }
+  a:hover{ color:var(--amber-deep); }
+  a:focus-visible, button:focus-visible{
+    outline:2.5px solid var(--amber-deep);
+    outline-offset:3px;
+    border-radius:2px;
+  }
 
-    section {
-      background: white;
-      border-radius: 15px;
-      padding: 30px 40px;
-      margin-top: -60px;
-      box-shadow: 0 8px 20px rgb(0 0 0 / 0.07);
-      position: relative;
-      z-index: 1;
-      margin-bottom: 40px;
-    }
-    section h2 {
-      font-size: 2rem;
-      font-weight: 600;
-      color: #264653;
-      margin-bottom: 25px;
-      border-bottom: 3px solid #2a9d8f;
-      padding-bottom: 8px;
-    }
-    section h3 {
-      font-weight: 600;
-      margin-top: 0;
-      margin-bottom: 12px;
-      color: #1d3557;
-    }
-    p {
-      margin-bottom: 18px;
-    }
-    ul {
-      list-style: disc inside;
-      margin: 0 0 25px 0;
-      padding-left: 0;
-    }
-    li {
-      margin-bottom: 8px;
-    }
+  h1,h2,h3{
+    font-family:'Space Grotesk', sans-serif;
+    margin:0;
+    color:var(--ink);
+    letter-spacing:-0.01em;
+  }
 
-    .experience-item {
-      background: #f4f7f6;
-      border-radius: 10px;
-      padding: 20px 25px;
-      margin-bottom: 25px;
-      box-shadow: 0 4px 10px rgb(0 0 0 / 0.05);
-    }
-    .experience-item p.duration {
-      font-style: italic;
-      color: #555;
-      margin-top: -10px;
-      margin-bottom: 15px;
-      font-weight: 500;
-    }
-    .experience-item p.project {
-      margin-top: -10px;
-      margin-bottom: 15px;
-      color: #2a9d8f;
-      font-weight: 600;
-    }
+  .mono{ font-family:'IBM Plex Mono', monospace; }
 
-    .grid-two {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-    .grid-three {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 20px;
-    }
-    @media (max-width: 600px) {
-      .grid-two, .grid-three {
-        grid-template-columns: 1fr;
-      }
-    }
+  .wrap{
+    max-width: var(--maxw);
+    margin:0 auto;
+    padding: 0 22px;
+  }
 
-    footer {
-      text-align: center;
-      margin: 40px 0 60px;
-      color: #555;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-    footer a {
-      margin: 0 15px;
-    }
+  /* ---------- HERO / TITLE BLOCK ---------- */
+  .hero{
+    background: var(--navy);
+    background-image:
+      linear-gradient(var(--navy-2) 0 0),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 34px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 34px);
+    background-blend-mode: normal;
+    color:#F1EFE6;
+    padding: 40px 0 0;
+    border-bottom: 6px solid var(--amber);
+  }
+  .hero-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:24px;
+    flex-wrap:wrap;
+    padding-bottom: 30px;
+  }
+  .hero-id .kicker{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    color:#B9C4D6;
+    text-transform:uppercase;
+  }
+  .hero-id h1{
+    font-size: clamp(2.1rem, 5vw, 3.15rem);
+    color:#FAF9F3;
+    margin-top:6px;
+    line-height:1.05;
+  }
+  .hero-id .role{
+    margin-top:10px;
+    font-size:1.05rem;
+    color:#D9CCA8;
+    font-weight:500;
+    max-width: 46ch;
+  }
 
-  </style>
+  .status-chip{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    border:1px solid rgba(255,255,255,0.22);
+    padding:9px 14px;
+    border-radius: var(--radius-tag);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    color:#F1EFE6;
+    background: rgba(255,255,255,0.04);
+  }
+  .led{
+    width:8px; height:8px; border-radius:50%;
+    background: var(--amber);
+    box-shadow: 0 0 0 0 rgba(217,142,43,0.6);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%{ box-shadow: 0 0 0 0 rgba(217,142,43,0.55); }
+    70%{ box-shadow: 0 0 0 7px rgba(217,142,43,0); }
+    100%{ box-shadow: 0 0 0 0 rgba(217,142,43,0); }
+  }
+
+  .titleblock{
+    border-top:1px solid rgba(255,255,255,0.18);
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .tb-cell{
+    border-right:1px solid rgba(255,255,255,0.14);
+    border-bottom:1px solid rgba(255,255,255,0.14);
+    padding:14px 18px;
+    min-width:0;
+  }
+  .tb-cell:nth-child(4n){ border-right:none; }
+  .tb-cell .lab{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.65rem;
+    letter-spacing:0.12em;
+    color:#93A0B4;
+    text-transform:uppercase;
+    margin-bottom:5px;
+  }
+  .tb-cell .val{
+    font-size:0.92rem;
+    color:#F1EFE6;
+    word-break:break-word;
+  }
+  .tb-cell .val a{ color:#F1EFE6; }
+  .tb-cell .val a:hover{ color:var(--amber); }
+
+  /* ---------- SCHEMATIC (hero SVG) ---------- */
+  .schematic-wrap{ padding: 4px 0 26px; }
+  .schematic-wrap svg{ width:100%; height:auto; display:block; }
+  .sch-line{
+    fill:none;
+    stroke:#8FA6C4;
+    stroke-width:1.6;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+    animation: draw 2.6s ease-out forwards;
+  }
+  .sch-node{ fill:#182233; stroke:#C9D3E2; stroke-width:1.4; }
+  .sch-hot{ fill:var(--amber); }
+  .sch-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:9.5px;
+    fill:#93A0B4;
+    letter-spacing:0.04em;
+  }
+  @keyframes draw{ to{ stroke-dashoffset:0; } }
+
+  /* ---------- SECTIONS ---------- */
+  section{ padding: 54px 0; }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:26px;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom:10px;
+  }
+  .section-head .sheet-no{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    color:var(--ink-soft);
+    letter-spacing:0.08em;
+  }
+  .section-head h2{ font-size:1.55rem; }
+
+  .lede{
+    font-size:1.02rem;
+    max-width:70ch;
+    color:var(--ink-soft);
+  }
+  .lede + .lede{ margin-top:14px; }
+
+  /* Panel schedule (competencies) */
+  .panel-schedule{
+    width:100%;
+    border-collapse:collapse;
+    font-size:0.9rem;
+  }
+  .panel-schedule caption{
+    text-align:left;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  .panel-schedule th{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    text-align:left;
+    padding:9px 12px;
+    border-bottom:1.5px solid var(--ink);
+  }
+  .panel-schedule td{
+    padding:11px 12px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  .panel-schedule td.ckt{
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--ink-soft);
+    width:52px;
+  }
+  .panel-schedule td.stat{ width:30px; }
+  .dot-on{
+    display:inline-block; width:9px; height:9px; border-radius:50%;
+    background:var(--teal);
+  }
+
+  /* Experience */
+  .timeline{
+    position:relative;
+    padding-left: 30px;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute; left:5px; top:6px; bottom:6px;
+    width:1px;
+    background: var(--line-strong);
+  }
+  .job{
+    position:relative;
+    padding-bottom:38px;
+  }
+  .job:last-child{ padding-bottom:0; }
+  .job::before{
+    content:"";
+    position:absolute;
+    left:-30px; top:5px;
+    width:11px; height:11px;
+    border-radius:50%;
+    background: var(--paper-panel);
+    border:2px solid var(--amber-deep);
+  }
+  .job-head{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:8px 20px;
+    margin-bottom:4px;
+  }
+  .job-title{ font-size:1.12rem; font-weight:600; }
+  .job-dates{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+  .job-org{
+    font-size:0.95rem;
+    color:var(--ink-soft);
+    margin-bottom:12px;
+  }
+  .job-org a{ font-weight:500; }
+
+  .projects{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-bottom:14px;
+  }
+  .proj{
+    border:1px dashed var(--line-strong);
+    border-radius: var(--radius-tag);
+    padding:10px 14px;
+    background: var(--paper-panel);
+    display:flex;
+    justify-content:space-between;
+    gap:14px;
+    flex-wrap:wrap;
+    align-items:baseline;
+  }
+  .proj-name a{ font-weight:600; }
+  .proj-date{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.74rem;
+    color:var(--ink-soft);
+  }
+
+  .job ul{
+    margin:0;
+    padding-left:0;
+    list-style:none;
+    display:grid;
+    gap:8px;
+  }
+  .job li{
+    position:relative;
+    padding-left:16px;
+    color:var(--ink-soft);
+    font-size:0.94rem;
+  }
+  .job li::before{
+    content:"";
+    position:absolute; left:0; top:0.62em;
+    width:7px; height:1.5px;
+    background: var(--amber-deep);
+  }
+
+  /* Education / title-block style cards */
+  .edu-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:16px;
+  }
+  .edu-card{
+    border:1px solid var(--line-strong);
+    border-radius: var(--radius-tag);
+    padding:18px 20px;
+    background: var(--paper-panel);
+  }
+  .edu-card .lab{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.65rem;
+    letter-spacing:0.1em;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  .edu-card h3{ font-size:1.02rem; margin-bottom:4px; }
+  .edu-card .sub{ font-size:0.9rem; color:var(--ink-soft); }
+  .edu-card .yr{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    color:var(--amber-deep);
+    margin-top:8px;
+    display:inline-block;
+  }
+
+  .reg-line{
+    margin-top:18px;
+    border:1px solid var(--teal);
+    background: var(--teal-soft);
+    border-radius: var(--radius-tag);
+    padding:12px 16px;
+    font-size:0.9rem;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:6px 16px;
+  }
+  .reg-line .lab{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.65rem;
+    letter-spacing:0.1em;
+    color:var(--teal);
+    text-transform:uppercase;
+  }
+
+  /* Certification tags */
+  .tag-field{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .cert-tag{
+    position:relative;
+    border:1px dashed var(--line-strong);
+    border-radius: var(--radius-tag);
+    padding:9px 14px 9px 22px;
+    font-size:0.84rem;
+    background: var(--paper-panel);
+    color:var(--ink);
+  }
+  .cert-tag::before{
+    content:"";
+    position:absolute; left:9px; top:50%;
+    transform:translateY(-50%);
+    width:6px; height:6px;
+    border-radius:50%;
+    border:1.4px solid var(--line-strong);
+    background:var(--paper);
+  }
+
+  /* Technical skills - datasheet columns */
+  .datasheet{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:0;
+    border:1px solid var(--ink);
+  }
+  .ds-col{
+    padding:18px 20px;
+    border-right:1px solid var(--line-strong);
+  }
+  .ds-col:last-child{ border-right:none; }
+  .ds-col h3{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:14px;
+    padding-bottom:8px;
+    border-bottom:1px solid var(--line);
+  }
+  .ds-col ul{ margin:0; padding:0; list-style:none; display:grid; gap:9px; }
+  .ds-col li{
+    font-size:0.87rem;
+    padding-left:14px;
+    position:relative;
+  }
+  .ds-col li::before{
+    content:"";
+    position:absolute; left:0; top:0.6em;
+    width:6px; height:1.5px;
+    background: var(--teal);
+  }
+
+  /* Languages - meter style */
+  .lang-grid{
+    display:grid;
+    gap:16px;
+    max-width:520px;
+  }
+  .lang-row{ display:grid; grid-template-columns: 110px 1fr 90px; align-items:center; gap:14px; }
+  .lang-name{ font-weight:500; font-size:0.92rem; }
+  .meter{
+    display:flex;
+    gap:4px;
+  }
+  .meter span{
+    height:8px; flex:1;
+    background: var(--line);
+    border-radius:1px;
+  }
+  .meter span.fill{ background: var(--teal); }
+  .lang-level{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    color:var(--ink-soft);
+    text-align:right;
+  }
+
+  /* Footer */
+  footer{
+    background: var(--navy);
+    color:#D9CCA8;
+    padding: 40px 0 34px;
+    margin-top:20px;
+  }
+  .foot-grid{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:22px;
+    align-items:flex-end;
+  }
+  footer h3{ color:#F1EFE6; font-size:1.1rem; margin-bottom:6px; }
+  footer p{ margin:0; font-size:0.9rem; color:#B9C4D6; }
+  .foot-links{
+    display:flex;
+    gap:22px;
+    flex-wrap:wrap;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.82rem;
+  }
+  .foot-links a{ color:#F1EFE6; }
+  .foot-links a:hover{ color:var(--amber); }
+  .foot-note{
+    margin-top:26px;
+    padding-top:16px;
+    border-top:1px solid rgba(255,255,255,0.14);
+    font-size:0.76rem;
+    color:#8391A8;
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  @media (max-width: 760px){
+    .titleblock{ grid-template-columns: repeat(2, 1fr); }
+    .tb-cell:nth-child(4n){ border-right:1px solid rgba(255,255,255,0.14); }
+    .tb-cell:nth-child(2n){ border-right:none; }
+    .edu-grid{ grid-template-columns: 1fr; }
+    .datasheet{ grid-template-columns: 1fr; }
+    .ds-col{ border-right:none; border-bottom:1px solid var(--line-strong); }
+    .ds-col:last-child{ border-bottom:none; }
+    .lang-row{ grid-template-columns: 90px 1fr 70px; gap:10px; }
+  }
+</style>
 </head>
 <body>
-  <header>
-    <img src="myphoto.jpg" alt="Muhammad Mustafa" />
-    <h1>Muhammad Mustafa</h1>
-    <p class="tagline">QC/QA Electrical Engineer | Riyadh, Saudi Arabia</p>
-    <a href="resume.pdf" class="btn-download" download>Download Resume</a>
-    <p style="margin-top: 20px; font-weight: 400; font-size: 0.95rem;">
-      <a href="mailto:eengg.mustafa@gmail.com" style="color:#a8c0c8;">eengg.mustafa@gmail.com</a> | 
-      <a href="tel:+966531295136" style="color:#a8c0c8;">+966 531 295 136</a> | 
-      Transferable IQAMA | Immediate Joining | Willing to Relocate Across GCC
-    </p>
-  </header>
 
-  <div class="container">
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <div class="hero-id">
+        <div class="kicker">Electrical Engineering — QA/QC · Testing &amp; Commissioning</div>
+        <h1>Muhammad Mustafa</h1>
+        <p class="role">Electrical Engineer supervising LV/MV installation, quality inspection, and testing &amp; commissioning on commercial and EPC construction sites across Saudi Arabia.</p>
+      </div>
+      <div class="status-chip"><span class="led" aria-hidden="true"></span>Available — Immediate Joining</div>
+    </div>
 
-    <section>
-      <h2>Professional Summary</h2>
-      <p>Results-driven Electrical Engineer with over 4 years of experience in electrical construction, QA/QC, testing &amp; commissioning, and MEP projects across commercial buildings, infrastructure, EPC, and switchgear manufacturing environments. Experienced in electrical installation, inspection, quality control, testing, commissioning, and project coordination for LV/MV electrical systems.</p>
-      <p>Strong knowledge of Saudi Aramco, SEC, IEC, IEEE, NFPA, NEC, and Saudi Building Code (SBC) standards, with proven ability to supervise construction activities, perform quality inspections, coordinate multidisciplinary teams, and deliver projects safely, efficiently, and in compliance with project specifications.</p>
-      <p>Seeking opportunities as <strong>QA/QC Electrical Engineer, Electrical Engineer, Testing &amp; Commissioning Engineer, Site Electrical Engineer, or Electrical Inspector</strong> within leading organizations across the GCC.</p>
+    <div class="titleblock">
+      <div class="tb-cell">
+        <div class="lab">Location</div>
+        <div class="val">Al Khobar, Saudi Arabia</div>
+      </div>
+      <div class="tb-cell">
+        <div class="lab">Residency</div>
+        <div class="val">Transferable Iqama · Open to GCC relocation</div>
+      </div>
+      <div class="tb-cell">
+        <div class="lab">Phone</div>
+        <div class="val"><a href="tel:+966531295136">+966 531 295 136</a></div>
+      </div>
+      <div class="tb-cell">
+        <div class="lab">Email</div>
+        <div class="val"><a href="mailto:eengg.mustafa@gmail.com">eengg.mustafa@gmail.com</a></div>
+      </div>
+      <div class="tb-cell">
+        <div class="lab">PEC Registration</div>
+        <div class="val">ELEC/105324</div>
+      </div>
+      <div class="tb-cell">
+        <div class="lab">Experience</div>
+        <div class="val">4+ years, electrical construction &amp; QA/QC</div>
+      </div>
+      <div class="tb-cell">
+        <div class="lab">Languages</div>
+        <div class="val">Urdu · English · Arabic</div>
+      </div>
+      <div class="tb-cell">
+        <div class="lab">LinkedIn</div>
+        <div class="val"><a href="https://www.linkedin.com/in/mustafajamshaid/" target="_blank" rel="noopener">/in/mustafajamshaid</a></div>
+      </div>
+    </div>
+
+    <div class="schematic-wrap">
+      <svg viewBox="0 0 1000 190" role="img" aria-label="Simplified one-line electrical distribution diagram from utility incomer through main distribution board to sub-panels">
+        <!-- main horizontal bus -->
+        <path class="sch-line" d="M40,95 H960" style="animation-delay:0.1s" />
+        <!-- incomer -->
+        <circle class="sch-node" cx="40" cy="95" r="6" />
+        <text class="sch-label" x="18" y="130">UTILITY</text>
+        <!-- transformer symbol -->
+        <circle class="sch-line sch-hot-outline" cx="180" cy="95" r="16" style="animation-delay:0.3s" />
+        <circle class="sch-line" cx="196" cy="95" r="16" style="animation-delay:0.35s" />
+        <text class="sch-label" x="155" y="130">TRANSFORMER</text>
+        <!-- MDB node -->
+        <rect class="sch-line" x="330" y="80" width="34" height="30" rx="2" style="animation-delay:0.5s"/>
+        <text class="sch-label" x="322" y="130">MDB</text>
+        <!-- branches down to SMDB/DB -->
+        <path class="sch-line" d="M470,95 V150" style="animation-delay:0.65s" />
+        <circle class="sch-node sch-hot" cx="470" cy="150" r="5" />
+        <text class="sch-label" x="440" y="172">SMDB</text>
+
+        <path class="sch-line" d="M620,95 V150" style="animation-delay:0.75s" />
+        <circle class="sch-node sch-hot" cx="620" cy="150" r="5" />
+        <text class="sch-label" x="596" y="172">DB-1</text>
+
+        <path class="sch-line" d="M770,95 V150" style="animation-delay:0.85s" />
+        <circle class="sch-node sch-hot" cx="770" cy="150" r="5" />
+        <text class="sch-label" x="746" y="172">DB-2</text>
+
+        <!-- ATS / generator branch -->
+        <path class="sch-line" d="M900,95 V40 H960" style="animation-delay:0.95s" />
+        <rect class="sch-line" x="900" y="24" width="34" height="18" rx="2" style="animation-delay:1.05s"/>
+        <text class="sch-label" x="890" y="18">ATS / GEN</text>
+
+        <!-- ground symbol -->
+        <path class="sch-line" d="M330,150 V170 M320,170 H340 M324,176 H336 M328,182 H332" style="animation-delay:1.1s" />
+        <text class="sch-label" x="300" y="128">GROUNDING</text>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <div class="wrap">
+
+    <section id="summary">
+      <div class="section-head">
+        <h2>Professional Summary</h2>
+      </div>
+      <p class="lede">Results-driven Electrical Engineer with over 4 years of experience in electrical construction, QA/QC, testing &amp; commissioning, and MEP projects across commercial buildings, infrastructure, EPC, and switchgear manufacturing environments — installation, inspection, quality control, and project coordination for LV/MV electrical systems.</p>
+      <p class="lede">Strong working knowledge of Saudi Aramco, SEC, IEC, IEEE, NFPA, NEC, and Saudi Building Code (SBC) standards, with a track record of supervising construction activities, running quality inspections, coordinating multidisciplinary teams, and delivering projects safely and in compliance with specification.</p>
+      <p class="lede">Open to roles as <strong>QA/QC Electrical Engineer, Electrical Site Engineer, Testing &amp; Commissioning Engineer,</strong> or <strong>Electrical Inspector</strong> with organizations across the GCC.</p>
     </section>
 
-    <section>
-      <h2>Core Competencies</h2>
-      <div class="grid-two">
-        <ul>
-          <li>QA/QC Electrical Inspection</li>
-          <li>Testing &amp; Commissioning</li>
-          <li>Electrical Construction &amp; Installation</li>
-          <li>Site Supervision</li>
-          <li>LV &amp; MV Power Distribution</li>
-          <li>Switchgear &amp; Transformer Installation</li>
-          <li>MDB, SMDB &amp; DB Installation</li>
-          <li>Cable Pulling &amp; Termination</li>
-        </ul>
-        <ul>
-          <li>Grounding &amp; Lightning Protection</li>
-          <li>Electrical Troubleshooting</li>
-          <li>Inspection Test Plans (ITP)</li>
-          <li>Inspection Requests (IR) &amp; MIR</li>
-          <li>Method Statements</li>
-          <li>Quality Documentation</li>
-          <li>Electrical Drawings &amp; Shop Drawings</li>
-          <li>Project Coordination</li>
-        </ul>
+    <section id="competencies">
+      <div class="section-head">
+        <span class="sheet-no mono">SHEET 01</span>
+        <h2>Core Competencies — Panel Schedule</h2>
       </div>
+      <table class="panel-schedule">
+        <caption>Load description reflects primary areas of professional coverage</caption>
+        <thead>
+          <tr><th class="ckt">Ckt</th><th class="stat">On</th><th>Load Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="ckt mono">01</td><td class="stat"><span class="dot-on"></span></td><td>QA/QC electrical inspection &amp; Inspection Test Plans (ITP)</td></tr>
+          <tr><td class="ckt mono">02</td><td class="stat"><span class="dot-on"></span></td><td>Testing &amp; commissioning — insulation, continuity, earth resistance, loop, functional</td></tr>
+          <tr><td class="ckt mono">03</td><td class="stat"><span class="dot-on"></span></td><td>LV &amp; MV power distribution, switchgear &amp; transformer installation</td></tr>
+          <tr><td class="ckt mono">04</td><td class="stat"><span class="dot-on"></span></td><td>MDB, SMDB &amp; DB installation, ATS panels, generators, UPS, capacitor banks</td></tr>
+          <tr><td class="ckt mono">05</td><td class="stat"><span class="dot-on"></span></td><td>Cable tray, conduit, trunking, pulling &amp; termination</td></tr>
+          <tr><td class="ckt mono">06</td><td class="stat"><span class="dot-on"></span></td><td>Grounding &amp; lightning protection systems</td></tr>
+          <tr><td class="ckt mono">07</td><td class="stat"><span class="dot-on"></span></td><td>Inspection Requests (IR), Material Inspection Requests (MIR), method statements</td></tr>
+          <tr><td class="ckt mono">08</td><td class="stat"><span class="dot-on"></span></td><td>Electrical &amp; shop drawing review, as-built and handover documentation</td></tr>
+          <tr><td class="ckt mono">09</td><td class="stat"><span class="dot-on"></span></td><td>Site supervision &amp; multidisciplinary project coordination</td></tr>
+        </tbody>
+      </table>
     </section>
 
-    <section>
-      <h2>Experience</h2>
-
-      <div class="experience-item">
-        <h3>QC Electrical Engineer</h3>
-        <p><strong>MAS Engineering &amp; Construction Ltd., Riyadh, Saudi Arabia</strong></p>
-        <p class="duration">April 2026 – Present</p>
-        <p class="project">Project: LEMAR Commercial Complex – Riyadh</p>
-        <ul>
-          <li>Supervise electrical installation works on commercial construction projects.</li>
-          <li>Ensure electrical works comply with approved IFC drawings, shop drawings, specifications, and quality standards.</li>
-          <li>Perform QA/QC inspections in accordance with Inspection Test Plans (ITPs) and project procedures.</li>
-          <li>Inspect cable trays, conduits, trunking, cable pulling, cable termination, lighting, grounding, and lightning protection systems.</li>
-          <li>Supervise installation of transformers, LV/MV switchgear, MDBs, SMDBs, DBs, ATS panels, generators, UPS systems, and capacitor banks.</li>
-          <li>Conduct testing and commissioning activities, including insulation resistance, continuity, earth resistance, loop, and functional testing.</li>
-        </ul>
+    <section id="experience">
+      <div class="section-head">
+        <span class="sheet-no mono">SHEET 02</span>
+        <h2>Professional Experience</h2>
       </div>
 
-      <div class="experience-item">
-        <h3>QA/QC Electrical Engineer</h3>
-        <p><strong>MAS Engineering &amp; Construction Ltd., Riyadh, Saudi Arabia</strong></p>
-        <p class="duration">December 2024 – April 2026</p>
-        <p class="project">Project: PRIME Business Resort – Riyadh</p>
-        <ul>
-          <li>Executed QA/QC activities per project specifications, SEC standards, and ISO 9001:2015.</li>
-          <li>Prepared and reviewed IR, MIR, testing reports, and quality documentation.</li>
-          <li>Created and edited AutoCAD markup drawings for redlines and as-builts.</li>
-          <li>Maintained QA/QC logs and version-controlled records.</li>
-          <li>Conducted electrical inspections: cable trays, MDBs, SMDBs, lighting, grounding, panels.</li>
-          <li>Supervised continuity, insulation, and phase sequence testing; supported commissioning.</li>
-          <li>Coordinated with consultants, clients, and multidisciplinary teams; supported audits and document approvals.</li>
-        </ul>
-      </div>
+      <div class="timeline">
 
-      <div class="experience-item">
-        <h3>QA/QC Electrical Engineer</h3>
-        <p><strong>Power Solutions Pvt. Ltd.</strong></p>
-        <p class="duration">July 2023 – November 2024</p>
-        <ul>
-          <li>Performed inspections for electrical systems in power generation/distribution projects.</li>
-          <li>Implemented ITPs and verified compliance through load testing.</li>
-          <li>Reviewed and processed IRs and NCRs; ensured corrective actions were documented.</li>
-          <li>Streamlined documentation control and coordinated with cross-functional teams.</li>
-        </ul>
-      </div>
+        <div class="job">
+          <div class="job-head">
+            <span class="job-title">QA/QC Electrical Engineer</span>
+            <span class="job-dates">June 2024 – Present</span>
+          </div>
+          <div class="job-org">
+            <a href="https://masecc.com/" target="_blank" rel="noopener">MAS Engineering &amp; Construction Ltd.</a> — Riyadh, Saudi Arabia
+          </div>
 
-      <div class="experience-item">
-        <h3>Electrical Engineering Intern</h3>
-        <p><strong>Power Solutions Pvt. Ltd.</strong></p>
-        <p class="duration">January 2022 – June 2023</p>
-        <ul>
-          <li>Assisted in FAT of DBs, panels, and switchgear; conducted functionality tests.</li>
-          <li>Tested earth continuity and phase sequence for compliance with safety standards.</li>
-          <li>Supported troubleshooting and process improvement during panel assembly.</li>
-        </ul>
-      </div>
-    </section>
+          <div class="projects">
+            <div class="proj">
+              <span class="proj-name"><a href="https://unitedlemar.com/" target="_blank" rel="noopener">LEMAR Commercial Complex — Plot A</a>, Riyadh</span>
+              <span class="proj-date mono">Apr 2026 – Present</span>
+            </div>
+            <div class="proj">
+              <span class="proj-name"><a href="https://www.mawan-re.sa/prime/" target="_blank" rel="noopener">PRIME Business Resort</a>, Riyadh</span>
+              <span class="proj-date mono">Dec 2024 – Apr 2026</span>
+            </div>
+            <div class="proj">
+              <span class="proj-name"><a href="https://www.kafd.sa/en" target="_blank" rel="noopener">KAFD Tower — Parcel 5.05</a>, Riyadh</span>
+              <span class="proj-date mono">Jun 2024 – Nov 2024</span>
+            </div>
+          </div>
 
-    <section>
-      <h2>Education</h2>
-      <p><strong>Bachelor's Degree in Electrical Engineering (PEC Registered)</strong></p>
-      <p>GIFT University, Pakistan — Graduated 2023</p>
-      <p><strong>OTHM Level 6 Diploma in Occupational Health &amp; Safety</strong></p>
-      <p>Ofqual Regulated Qualification, United Kingdom — Completed 2024</p>
-    </section>
-
-    <section>
-      <h2>Certifications</h2>
-      <ul>
-        <li>OTHM Level 6 Diploma in Occupational Health &amp; Safety – Ofqual</li>
-        <li>OSHA 30-Hour Construction Safety – OSHAcademy</li>
-        <li>IOSH Managing Safely</li>
-        <li>ISO 9001:2015 Quality Management Systems</li>
-        <li>LeanPM® Black Belt, Green Belt, Yellow Belt – Lean Project Management Foundation</li>
-        <li>Six Sigma Black Belt – Project Management</li>
-        <li>Google Project Management Fundamentals – Coursera</li>
-        <li>Confined Space Safety – OSHAC</li>
-        <li>Fire Safety – OSHAC</li>
-        <li>Electrical Safety – OSHAC</li>
-        <li>Work at Height – OSHAC</li>
-        <li>First Aid &amp; CPR – OSHAC</li>
-        <li>Risk Assessment – OSHAC</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Technical Skills</h2>
-      <div class="grid-three">
-        <div>
-          <h3>Electrical Engineering</h3>
           <ul>
-            <li>Electrical Construction Management</li>
-            <li>Installation &amp; Site Supervision</li>
-            <li>QA/QC Inspection</li>
-            <li>Testing &amp; Commissioning</li>
-            <li>LV &amp; MV Power Distribution</li>
-            <li>Switchgear &amp; Transformer Systems</li>
-            <li>MDB, SMDB &amp; Distribution Boards</li>
-            <li>ATS &amp; Generator Systems</li>
-            <li>Cable Routing, Glanding &amp; Termination</li>
-            <li>Grounding &amp; Lightning Protection</li>
-            <li>Electrical Troubleshooting</li>
-            <li>Load Calculations</li>
-            <li>Electrical Drawing Interpretation</li>
+            <li>Supervise electrical installation works, ensuring compliance with approved IFC drawings, shop drawings, specifications, and quality standards.</li>
+            <li>Perform QA/QC inspections per Inspection Test Plans (ITPs) and project procedures — cable trays, conduits, trunking, cable pulling, termination, lighting, grounding, and lightning protection.</li>
+            <li>Supervise installation of transformers, LV/MV switchgear, MDBs, SMDBs, DBs, ATS panels, generators, UPS systems, and capacitor banks.</li>
+            <li>Run testing &amp; commissioning activities: insulation resistance, continuity, earth resistance, loop, and functional testing.</li>
+            <li>Prepare IRs, MIRs, testing reports, and quality documentation; coordinate with consultants, clients, and subcontractors.</li>
+            <li>Review drawings, submittals, and material approvals; support progress reporting, as-built drawings, and handover documentation.</li>
+            <li>Maintain compliance with Saudi Aramco, SEC, IEC, IEEE, NFPA, NEC, and SBC standards, and with HSE / Permit to Work procedures.</li>
           </ul>
         </div>
-        <div>
-          <h3>Quality &amp; Project Management</h3>
+
+        <div class="job">
+          <div class="job-head">
+            <span class="job-title">QA/QC Electrical Engineer</span>
+            <span class="job-dates">July 2023 – June 2024</span>
+          </div>
+          <div class="job-org">
+            <a href="https://powersolutions.pk/" target="_blank" rel="noopener">Power Solutions Pvt. Ltd.</a> — Lahore, Pakistan
+          </div>
+          <ul>
+            <li>Performed electrical QA/QC inspections within a switchgear manufacturing environment, supporting a leading MV/LV switchboard manufacturer.</li>
+            <li>Implemented ITPs and verified compliance through load testing.</li>
+            <li>Reviewed and processed Inspection Requests and NCRs, ensuring corrective actions were documented.</li>
+            <li>Streamlined documentation control and coordinated with cross-functional teams.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <span class="job-title">Electrical Engineering Intern</span>
+            <span class="job-dates">January 2022 – June 2023</span>
+          </div>
+          <div class="job-org">
+            <a href="https://powersolutions.pk/" target="_blank" rel="noopener">Power Solutions Pvt. Ltd.</a> — Lahore, Pakistan
+          </div>
+          <ul>
+            <li>Assisted in Factory Acceptance Testing (FAT) of distribution boards, panels, and switchgear; conducted functionality tests.</li>
+            <li>Tested earth continuity and phase sequence for compliance with safety standards.</li>
+            <li>Supported troubleshooting and process improvement during panel assembly.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="section-head">
+        <h2>Education</h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div class="lab">Degree</div>
+          <h3>BSc Electrical Engineering</h3>
+          <div class="sub"><a href="https://gift.edu.pk/" target="_blank" rel="noopener">GIFT University</a>, Pakistan</div>
+          <span class="yr">Graduated 2023</span>
+        </div>
+        <div class="edu-card">
+          <div class="lab">Diploma</div>
+          <h3>OTHM Level 6 — Occupational Health &amp; Safety</h3>
+          <div class="sub">Ofqual Regulated Qualification, United Kingdom</div>
+          <span class="yr">Completed 2024</span>
+        </div>
+      </div>
+      <div class="reg-line">
+        <span><span class="lab">Registration</span>Registered Electrical Engineer</span>
+        <span class="mono">Pakistan Engineering Council — <a href="https://www.pec.org.pk/" target="_blank" rel="noopener">pec.org.pk</a> — Reg. No. ELEC/105324</span>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <div class="section-head">
+        <h2>Certifications</h2>
+      </div>
+      <div class="tag-field">
+        <span class="cert-tag">OTHM L6 Occupational Health &amp; Safety</span>
+        <span class="cert-tag">OSHA 30-Hour Construction Safety</span>
+        <span class="cert-tag">IOSH Managing Safely</span>
+        <span class="cert-tag">ISO 9001:2015 QMS</span>
+        <span class="cert-tag">LeanPM® Black Belt</span>
+        <span class="cert-tag">LeanPM® Green Belt</span>
+        <span class="cert-tag">LeanPM® Yellow Belt</span>
+        <span class="cert-tag">Six Sigma Black Belt — Project Management</span>
+        <span class="cert-tag">Google Project Management Fundamentals</span>
+        <span class="cert-tag">Confined Space Safety</span>
+        <span class="cert-tag">Fire Safety</span>
+        <span class="cert-tag">Electrical Safety</span>
+        <span class="cert-tag">Work at Height</span>
+        <span class="cert-tag">First Aid &amp; CPR</span>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-head">
+        <h2>Technical Skills &amp; Standards</h2>
+      </div>
+      <div class="datasheet">
+        <div class="ds-col">
+          <h3>Electrical Engineering</h3>
+          <ul>
+            <li>Electrical construction management</li>
+            <li>Installation &amp; site supervision</li>
+            <li>LV &amp; MV power distribution</li>
+            <li>Switchgear &amp; transformer systems</li>
+            <li>MDB, SMDB &amp; distribution boards</li>
+            <li>ATS &amp; generator systems</li>
+            <li>Cable routing, glanding &amp; termination</li>
+            <li>Grounding &amp; lightning protection</li>
+            <li>Load calculations</li>
+            <li>Drawing interpretation</li>
+          </ul>
+        </div>
+        <div class="ds-col">
+          <h3>Quality &amp; Project Mgmt</h3>
           <ul>
             <li>Inspection Test Plans (ITP)</li>
             <li>Inspection Requests (IR)</li>
             <li>Material Inspection Requests (MIR)</li>
-            <li>Method Statements</li>
-            <li>Quality Assurance &amp; Quality Control</li>
-            <li>Material Management</li>
-            <li>Project Planning &amp; Scheduling</li>
-            <li>Project Coordination</li>
-            <li>As-Built Documentation</li>
-            <li>Handover Documentation</li>
+            <li>Method statements</li>
+            <li>QA/QC documentation</li>
+            <li>Material management</li>
+            <li>Project planning &amp; scheduling</li>
+            <li>As-built &amp; handover documentation</li>
           </ul>
         </div>
-        <div>
+        <div class="ds-col">
           <h3>Software &amp; Standards</h3>
           <ul>
-            <li>AutoCAD</li>
+            <li>AutoCAD · Navisworks</li>
+            <li>Proteus · Multisim</li>
             <li>Microsoft Excel, Word, PowerPoint</li>
             <li>Saudi Aramco Standards</li>
-            <li>Saudi Electricity Company (SEC) Standards</li>
-            <li>IEC Standards</li>
-            <li>IEEE Standards</li>
-            <li>NFPA Codes</li>
-            <li>NEC Standards</li>
+            <li>Saudi Electricity Company (SEC)</li>
+            <li>IEC · IEEE · NFPA · NEC</li>
             <li>Saudi Building Code (SBC)</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section>
-      <h2>Languages</h2>
-      <ul>
-        <li>English: Professional Working Proficiency</li>
-        <li>Urdu: Native</li>
-        <li>Arabic: Basic Communication</li>
-      </ul>
+    <section id="languages">
+      <div class="section-head">
+        <h2>Languages</h2>
+      </div>
+      <div class="lang-grid">
+        <div class="lang-row">
+          <span class="lang-name">Urdu</span>
+          <span class="meter"><span class="fill"></span><span class="fill"></span><span class="fill"></span><span class="fill"></span><span class="fill"></span></span>
+          <span class="lang-level">Native</span>
+        </div>
+        <div class="lang-row">
+          <span class="lang-name">English</span>
+          <span class="meter"><span class="fill"></span><span class="fill"></span><span class="fill"></span><span class="fill"></span><span></span></span>
+          <span class="lang-level">Professional</span>
+        </div>
+        <div class="lang-row">
+          <span class="lang-name">Arabic</span>
+          <span class="meter"><span class="fill"></span><span class="fill"></span><span></span><span></span><span></span></span>
+          <span class="lang-level">Basic</span>
+        </div>
+      </div>
     </section>
-  </div>
 
-  <footer>
-    <a href="mailto:eengg.mustafa@gmail.com" aria-label="Email">Email</a> | 
-    <a href="https://www.linkedin.com/in/mustafajamshaid" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a> | 
-    <a href="https://mmj-mustafa.github.io" target="_blank" rel="noopener" aria-label="Portfolio">Portfolio</a>
-  </footer>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h3>Muhammad Mustafa</h3>
+        <p>Electrical Engineer — QA/QC · Testing &amp; Commissioning · Al Khobar, Saudi Arabia</p>
+      </div>
+      <div class="foot-links">
+        <a href="mailto:eengg.mustafa@gmail.com">Email</a>
+        <a href="tel:+966531295136">Call</a>
+        <a href="https://www.linkedin.com/in/mustafajamshaid/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="foot-note">Transferable Iqama · Immediate joining · Willing to relocate across GCC</div>
+  </div>
+</footer>
+
 </body>
 </html>
