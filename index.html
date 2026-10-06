@@ -10,122 +10,140 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F7F9F6; --text:#1B211E; --soft:#5F6B64; --line:#DCE5DD;
-  --accent:#2F6B50; --deep:#1F3D31; --tint:#E6EFE7; --max:880px;
+  --forest:#13302A; --forest-2:#1B4137; --sage:#9DB3A7; --mist:#F2F4F2;
+  --ink:#171B1A; --soft:#5B6661; --line:#DDE2DE; --white:#FFFFFF;
+  --max:1080px; --serif:'Playfair Display',Georgia,serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.7 'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-h1,h2,h3{margin:0;font-weight:600;line-height:1.15;letter-spacing:-0.02em}
-a{color:inherit;text-decoration-color:var(--line);text-underline-offset:4px;transition:color .2s,text-decoration-color .2s}
-a:hover{color:var(--accent);text-decoration-color:var(--accent)}
-a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+body{margin:0;background:var(--white);color:var(--ink);font:400 16px/1.7 'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{margin:0;font-family:var(--serif);font-weight:500;line-height:1.15}
+a{color:inherit;text-underline-offset:4px;transition:color .2s,background .2s,border-color .2s}
+a:focus-visible,button:focus-visible{outline:2px solid var(--forest-2);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
 
 /* Header */
-.bar{position:sticky;top:0;z-index:40;background:rgba(247,249,246,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.bar .wrap{display:flex;align-items:center;justify-content:space-between;min-height:60px}
-.brand{font-weight:600;text-decoration:none}
-.bar nav{display:flex;gap:26px}
-.bar nav a{text-decoration:none;color:var(--soft);font-size:.93rem}
-.bar nav a:hover{color:var(--accent)}
+.bar{position:sticky;top:0;z-index:40;background:var(--white);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;min-height:68px}
+.brand{font:600 1.15rem var(--serif);text-decoration:none;color:var(--forest)}
+.bar nav{display:flex;align-items:center;gap:30px}
+.bar nav a{font-size:.9rem;text-decoration:none;color:var(--soft)}
+.bar nav a:hover{color:var(--forest)}
+.bar nav a.cta{color:var(--white);background:var(--forest);padding:9px 20px;border-radius:2px;font-weight:500}
+.bar nav a.cta:hover{background:var(--forest-2);color:var(--white)}
 
 /* Hero */
-.hero{padding:88px 0 72px;background:linear-gradient(180deg,var(--tint),var(--bg))}
-.hero-grid{display:grid;grid-template-columns:1fr 240px;gap:56px;align-items:center}
-.hero h1{font-size:clamp(2.3rem,5.5vw,3.6rem);font-weight:600;max-width:16ch}
-.hero .intro{max-width:52ch;margin:22px 0 30px;color:var(--soft);font-size:1.1rem}
-.btns{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-block;padding:12px 24px;border-radius:999px;border:1px solid var(--deep);text-decoration:none;font-weight:500;font-size:.95rem;transition:background .2s,color .2s,border-color .2s}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
-.btn.primary:hover{background:var(--deep);border-color:var(--deep);color:#fff}
-.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
-.photo{aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:#D5E3D8;display:grid;place-items:center;position:relative}
-.photo .initials{font:600 4.5rem 'DM Sans',sans-serif;color:#A9C2B0}
-.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:56px 0 0;padding-top:28px;border-top:1px solid var(--line)}
-.facts dt{font-size:.85rem;color:var(--soft)}
-.facts dd{margin:2px 0 0;font-weight:500}
-.hero .in{opacity:0;transform:translateY(14px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i,0)*.1s)}
+.hero{background:var(--forest);color:#E8EFEB}
+.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:72px;align-items:center;padding:96px 0 88px}
+.role{font-size:.9rem;color:var(--sage);margin-bottom:20px}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.2rem);color:var(--white);margin-bottom:24px}
+.hero p.intro{max-width:52ch;margin:0 0 34px;font-size:1.08rem;color:#C2D0C9}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;padding:14px 28px;border-radius:2px;font-weight:500;font-size:.95rem;text-decoration:none;border:1px solid var(--sage)}
+.btn.primary{background:var(--white);color:var(--forest);border-color:var(--white)}
+.btn.primary:hover{background:var(--mist)}
+.btn.ghost{color:var(--white)}
+.btn.ghost:hover{background:rgba(255,255,255,.08)}
+.portrait{position:relative;aspect-ratio:4/5;max-width:340px;justify-self:end;width:100%;background:var(--forest-2);display:grid;place-items:center;outline:1px solid rgba(157,179,167,.5);outline-offset:14px}
+.portrait .initials{font:500 5rem var(--serif);color:#3A6153}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .in{opacity:0;transform:translateY(16px);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i,0)*.12s)}
 @keyframes rise{to{opacity:1;transform:none}}
 
+/* Key figures */
+.figures{background:var(--forest-2);color:var(--white)}
+.figures .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.fig{padding:28px 24px 28px 0}
+.fig+.fig{padding-left:28px;border-left:1px solid rgba(157,179,167,.3)}
+.fig small{display:block;font-size:.8rem;color:var(--sage);margin-bottom:4px}
+.fig strong{font:500 1.15rem var(--serif)}
+
 /* Sections */
-section{padding:72px 0;border-top:1px solid var(--line)}
-#contact{background:var(--tint)}
-h2{font-size:clamp(1.6rem,3.4vw,2.1rem);margin-bottom:32px}
-h3.sub{font-size:1.05rem;margin:48px 0 16px}
+section{padding:92px 0}
+section.alt{background:var(--mist)}
+.head{display:grid;grid-template-columns:240px 1fr;gap:56px;margin-bottom:48px}
+.head p{margin:0;font-size:.9rem;color:var(--soft);padding-top:10px;border-top:2px solid var(--forest);align-self:start}
+h2{font-size:clamp(1.8rem,3.4vw,2.5rem);color:var(--forest);max-width:20ch}
+.body{margin-left:296px}
 
 /* About */
-.about{display:grid;grid-template-columns:1.4fr 1fr;gap:56px}
-.about p{margin:0 0 16px;color:var(--soft)}
-.about p.lead{font-size:1.15rem;color:var(--text)}
-.stats{display:grid;gap:0;align-content:start}
-.stat{padding:18px 0;border-bottom:1px solid var(--line)}
-.stat:first-child{padding-top:0}
-.stat strong{display:block;font-size:2rem;font-weight:600;line-height:1.1;color:var(--accent)}
-.stat span{color:var(--soft);font-size:.92rem}
+.about p{margin:0 0 18px;color:var(--soft);max-width:62ch}
+.about p.lead{font:500 1.5rem/1.45 var(--serif);color:var(--ink)}
 
 /* Expertise */
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:36px 32px}
-.ex h3{font-size:1.05rem;margin-bottom:8px}
+.ex-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+.ex{padding:24px 0;border-top:1px solid var(--line)}
+.ex h3{font:600 1.05rem 'Inter',sans-serif;color:var(--forest);margin-bottom:6px}
 .ex p{margin:0;color:var(--soft);font-size:.95rem}
 
-/* Projects */
-.job{padding:26px 0;border-top:1px solid var(--line)}
-.job:first-child{border-top:0;padding-top:0}
-.job-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 20px}
-.job h3{font-size:1.1rem}
-.dates{color:var(--soft);font-size:.92rem}
-.org{color:var(--soft);margin:2px 0 0}
-.projects{margin:16px 0 0;padding:0;list-style:none}
-.projects li a{display:flex;gap:16px;justify-content:space-between;padding:12px 0;border-top:1px solid var(--line);text-decoration:none;transition:padding .25s,color .2s}
-.projects li a:hover{padding-left:8px;color:var(--accent)}
-.projects .d{color:var(--soft);font-size:.88rem;white-space:nowrap}
+/* Experience timeline */
+.tl{border-left:1px solid var(--sage);margin-left:4px}
+.role-item{position:relative;padding:0 0 40px 32px}
+.role-item:last-child{padding-bottom:0}
+.role-item::before{content:"";position:absolute;left:-5px;top:9px;width:9px;height:9px;border-radius:50%;background:var(--forest)}
+.role-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 24px}
+.role-item h3{font-size:1.35rem}
+.dates{font-size:.9rem;color:var(--soft)}
+.org{margin:2px 0 0;color:var(--soft)}
+.org a{color:var(--forest);font-weight:500}
+.projects{list-style:none;margin:18px 0 0;padding:0;background:var(--white);border:1px solid var(--line)}
+.projects li+li{border-top:1px solid var(--line)}
+.projects a{display:flex;justify-content:space-between;gap:16px;padding:15px 20px;text-decoration:none;font-weight:500}
+.projects a:hover{background:var(--mist);color:var(--forest)}
+.projects .d{color:var(--soft);font-weight:400;font-size:.88rem;white-space:nowrap}
 
 /* Credentials */
-.cols2{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:28px}
-.card h3{font-size:1.05rem;margin-bottom:4px}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:28px}
+.card{background:var(--white);border:1px solid var(--line);border-top:3px solid var(--forest);padding:26px}
+.card h3{font-size:1.15rem;margin-bottom:6px}
 .card p{margin:0;color:var(--soft);font-size:.94rem}
-.card .yr{display:block;margin-top:6px;font-size:.88rem;color:var(--accent);font-weight:500}
-.pec{padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--soft)}
-.pec span{color:var(--text);font-weight:500}
-.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
-.tags li{background:var(--tint);border:1px solid #CFDDD1;border-radius:999px;padding:6px 14px;font-size:.88rem;color:var(--soft)}
-.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-.skills ul{margin:0;padding:0;list-style:none;color:var(--soft);font-size:.95rem}
-.skills li{padding:8px 0;border-bottom:1px solid var(--line)}
-.langs{display:flex;flex-wrap:wrap;gap:24px;margin:0;padding:0;list-style:none}
+.card .yr{display:block;margin-top:10px;font-size:.88rem;font-weight:500;color:var(--forest)}
+.pec{padding:20px 26px;background:var(--forest);color:#C2D0C9;margin-bottom:52px}
+.pec span{color:var(--white);font-weight:500}
+h3.sub{font-size:1.25rem;color:var(--forest);margin:0 0 18px}
+.tags{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0 0 52px;padding:0}
+.tags li{background:var(--white);border:1px solid var(--line);padding:8px 16px;font-size:.88rem;color:var(--soft)}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-bottom:52px}
+.skills ul{margin:0;padding:0;list-style:none;font-size:.95rem;color:var(--soft)}
+.skills li{padding:10px 0;border-bottom:1px solid var(--line)}
+.langs{display:flex;flex-wrap:wrap;gap:32px;margin:0;padding:0;list-style:none}
 .langs span{color:var(--soft)}
 
 /* Contact */
-.contact-list{display:grid;gap:0}
-.c{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 0;border-top:1px solid var(--line);text-decoration:none;transition:padding .25s,color .2s}
-.c:last-child{border-bottom:1px solid var(--line)}
-.c small{color:var(--soft);font-size:.88rem}
-.c strong{font-weight:500;word-break:break-word;text-align:right}
-.c:hover{padding-left:8px;color:var(--accent)}
+#contact{background:var(--forest);color:#C2D0C9}
+#contact .head p{color:var(--sage);border-color:var(--sage)}
+#contact h2{color:var(--white)}
+.contact-list{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.c{display:flex;flex-direction:column;gap:2px;padding:22px 0;border-top:1px solid rgba(157,179,167,.35);text-decoration:none;color:var(--white)}
+.c small{color:var(--sage);font-size:.82rem}
+.c strong{font-weight:500;font-size:1.05rem;word-break:break-word}
+.c:hover strong{text-decoration:underline;text-underline-offset:5px}
 
-footer{padding:28px 0;color:#B9CDBF;background:var(--deep);font-size:.88rem}
-footer a:hover{color:#fff}
+footer{background:#0C201B;color:var(--sage);font-size:.86rem;padding:24px 0}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--white)}
 
 /* Floating contact buttons */
 .fab{position:fixed;left:max(16px,env(safe-area-inset-left));bottom:max(16px,env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:10px;z-index:60}
-.fab a{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:var(--accent);color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.18);transition:background .2s,transform .2s}
-.fab a:hover,.fab a:focus-visible{background:var(--deep);color:#fff;transform:translateY(-2px)}
+.fab a{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:var(--forest);color:var(--white);box-shadow:0 6px 18px rgba(0,0,0,.22);transition:background .2s,transform .2s}
+.fab a:hover,.fab a:focus-visible{background:var(--forest-2);transform:translateY(-2px)}
+.fab .wa svg{width:24px;height:24px;fill:currentColor;stroke:none}
 .fab svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
-@media (max-width:760px){
-  .hero{padding:56px 0 48px}
-  .hero-grid,.about,.cols2{grid-template-columns:1fr;gap:40px}
-  .photo{max-width:220px;order:-1}
-  .facts,.grid3,.skills{grid-template-columns:1fr}
-  .bar nav{gap:16px}
-  .bar nav a:nth-child(-n+2){display:none}
-  section{padding:56px 0}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:56px;padding:64px 0}
+  .portrait{justify-self:start;max-width:260px;outline-offset:10px;margin-left:10px}
+  .figures .wrap{grid-template-columns:1fr 1fr}
+  .fig:nth-child(3){padding-left:0;border-left:0}
+  .head{grid-template-columns:1fr;gap:16px;margin-bottom:36px}
+  .body{margin-left:0}
+  .ex-grid,.cols2,.skills,.contact-list{grid-template-columns:1fr}
+  .bar nav a:not(.cta){display:none}
+  section{padding:68px 0}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -142,60 +160,56 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
     <nav aria-label="Main">
       <a href="#about">About</a>
       <a href="#expertise">Expertise</a>
-      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
       <a href="#credentials">Credentials</a>
-      <a href="#contact">Contact</a>
+      <a class="cta" href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <div class="hero">
-  <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <h1 class="in" style="--i:0">Electrical quality, verified on site.</h1>
-        <p class="intro in" style="--i:1">I supervise LV/MV installation, quality inspection, and testing and commissioning on commercial and EPC construction projects across Saudi Arabia.</p>
-        <div class="btns in" style="--i:2">
-          <a class="btn primary" href="#contact">Get in touch</a>
-          <a class="btn ghost" href="#projects">View projects</a>
-        </div>
-      </div>
-      <div class="photo in" style="--i:1">
-        <span class="initials" aria-hidden="true">MM</span>
-        <img src="mustafa2.png" alt="Muhammad Mustafa, Electrical Engineer" onerror="this.remove()">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="role in" style="--i:0">Electrical Engineer | QA/QC | Testing &amp; Commissioning</div>
+      <h1 class="in" style="--i:1">Electrical quality, verified on site.</h1>
+      <p class="intro in" style="--i:2">I supervise LV/MV installation, quality inspection, and testing and commissioning on commercial and EPC construction projects across Saudi Arabia.</p>
+      <div class="btns in" style="--i:3">
+        <a class="btn primary" href="#contact">Get in touch</a>
+        <a class="btn ghost" href="#experience">View experience</a>
       </div>
     </div>
-    <dl class="facts in" style="--i:3">
-      <div><dt>Based in</dt><dd>Al Khobar, Saudi Arabia</dd></div>
-      <div><dt>Experience</dt><dd>4+ years in electrical construction and QA/QC</dd></div>
-      <div><dt>PEC registration</dt><dd>ELEC/105324</dd></div>
-    </dl>
+    <div class="portrait in" style="--i:2">
+      <span class="initials" aria-hidden="true">MM</span>
+      <img src="mustafa2.png" alt="Muhammad Mustafa, Electrical Engineer" onerror="this.remove()">
+    </div>
+  </div>
+</div>
+
+<div class="figures">
+  <div class="wrap">
+    <div class="fig"><small>Based in</small><strong>Al Khobar, Saudi Arabia</strong></div>
+    <div class="fig"><small>Experience</small><strong>4+ years</strong></div>
+    <div class="fig"><small>PEC registration</small><strong>ELEC/105324</strong></div>
+    <div class="fig"><small>Certifications</small><strong>13</strong></div>
   </div>
 </div>
 
 <main>
 <section id="about">
   <div class="wrap">
-    <h2>About</h2>
-    <div class="about">
-      <div>
-        <p class="lead">I'm an electrical engineer with over 4 years of experience across commercial buildings, infrastructure, EPC projects, and switchgear manufacturing.</p>
-        <p>My work covers installation, inspection, quality control, and coordination for LV/MV electrical systems, delivered safely and to specification.</p>
-        <p>I work to Saudi Aramco, SEC, IEC, IEEE, NFPA, NEC, and Saudi Building Code (SBC) standards.</p>
-      </div>
-      <div class="stats">
-        <div class="stat"><strong>4+</strong><span>Years in electrical construction and QA/QC</span></div>
-        <div class="stat"><strong>3</strong><span>Major projects delivered in Riyadh</span></div>
-        <div class="stat"><strong>13</strong><span>Safety, quality and management certifications</span></div>
-      </div>
+    <div class="head"><p>About</p><h2>Precision in every installation</h2></div>
+    <div class="body about">
+      <p class="lead">I'm an electrical engineer with over 4 years of experience across commercial buildings, infrastructure, EPC projects, and switchgear manufacturing.</p>
+      <p>My work covers installation, inspection, quality control, and coordination for LV/MV electrical systems, delivered safely and to specification.</p>
+      <p>I work to Saudi Aramco, SEC, IEC, IEEE, NFPA, NEC, and Saudi Building Code (SBC) standards.</p>
     </div>
   </div>
 </section>
 
-<section id="expertise">
+<section id="expertise" class="alt">
   <div class="wrap">
-    <h2>Expertise</h2>
-    <div class="grid3">
+    <div class="head"><p>Expertise</p><h2>Structure for safe power</h2></div>
+    <div class="body ex-grid">
       <article class="ex"><h3>QA/QC inspection</h3><p>Inspections against approved ITPs, drawings, specifications, and project procedures.</p></article>
       <article class="ex"><h3>Testing and commissioning</h3><p>Insulation resistance, continuity, earth resistance, loop, and functional testing.</p></article>
       <article class="ex"><h3>LV/MV distribution</h3><p>Transformers, switchgear, MDBs, SMDBs, DBs, ATS panels, generators, UPS, and capacitor banks.</p></article>
@@ -206,72 +220,70 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
   </div>
 </section>
 
-<section id="projects">
+<section id="experience">
   <div class="wrap">
-    <h2>Project experience</h2>
-    <div class="job">
-      <div class="job-head"><h3>QA/QC Electrical Engineer</h3><span class="dates">June 2024 to present</span></div>
-      <p class="org"><a href="https://masecc.com/" target="_blank" rel="noopener">MAS Engineering &amp; Construction Ltd.</a>, Riyadh</p>
-      <ul class="projects">
-        <li><a href="https://unitedlemar.com/" target="_blank" rel="noopener"><span>LEMAR Commercial Complex, Plot A</span><span class="d">Apr 2026 to present</span></a></li>
-        <li><a href="https://www.mawan-re.sa/prime/" target="_blank" rel="noopener"><span>PRIME Business Resort</span><span class="d">Dec 2024 to Apr 2026</span></a></li>
-        <li><a href="https://www.kafd.sa/en" target="_blank" rel="noopener"><span>KAFD Tower, Parcel 5.05</span><span class="d">Jun 2024 to Nov 2024</span></a></li>
-      </ul>
-    </div>
-    <div class="job">
-      <div class="job-head"><h3>QA/QC Electrical Engineer</h3><span class="dates">July 2023 to June 2024</span></div>
-      <p class="org"><a href="https://powersolutions.pk/" target="_blank" rel="noopener">Power Solutions Pvt. Ltd.</a>, Lahore, Pakistan</p>
-    </div>
-    <div class="job">
-      <div class="job-head"><h3>Electrical Engineering Intern</h3><span class="dates">January 2022 to June 2023</span></div>
-      <p class="org"><a href="https://powersolutions.pk/" target="_blank" rel="noopener">Power Solutions Pvt. Ltd.</a>, Lahore, Pakistan</p>
+    <div class="head"><p>Experience</p><h2>Career and project record</h2></div>
+    <div class="body tl">
+      <div class="role-item">
+        <div class="role-top"><h3>QA/QC Electrical Engineer</h3><span class="dates">June 2024 to present</span></div>
+        <p class="org"><a href="https://masecc.com/" target="_blank" rel="noopener">MAS Engineering &amp; Construction Ltd.</a>, Riyadh</p>
+        <ul class="projects">
+          <li><a href="https://unitedlemar.com/" target="_blank" rel="noopener"><span>LEMAR Commercial Complex, Plot A</span><span class="d">Apr 2026 to present</span></a></li>
+          <li><a href="https://www.mawan-re.sa/prime/" target="_blank" rel="noopener"><span>PRIME Business Resort</span><span class="d">Dec 2024 to Apr 2026</span></a></li>
+          <li><a href="https://www.kafd.sa/en" target="_blank" rel="noopener"><span>KAFD Tower, Parcel 5.05</span><span class="d">Jun 2024 to Nov 2024</span></a></li>
+        </ul>
+      </div>
+      <div class="role-item">
+        <div class="role-top"><h3>QA/QC Electrical Engineer</h3><span class="dates">July 2023 to June 2024</span></div>
+        <p class="org"><a href="https://powersolutions.pk/" target="_blank" rel="noopener">Power Solutions Pvt. Ltd.</a>, Lahore, Pakistan</p>
+      </div>
+      <div class="role-item">
+        <div class="role-top"><h3>Electrical Engineering Intern</h3><span class="dates">January 2022 to June 2023</span></div>
+        <p class="org"><a href="https://powersolutions.pk/" target="_blank" rel="noopener">Power Solutions Pvt. Ltd.</a>, Lahore, Pakistan</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="credentials">
+<section id="credentials" class="alt">
   <div class="wrap">
-    <h2>Credentials</h2>
-    <div class="cols2">
-      <div class="card"><h3>BSc Electrical Engineering</h3><p><a href="https://gift.edu.pk/" target="_blank" rel="noopener">GIFT University</a>, Pakistan</p><span class="yr">Graduated 2023</span></div>
-      <div class="card"><h3>OTHM Level 6 Diploma, Occupational Health &amp; Safety</h3><p>Ofqual regulated qualification, United Kingdom</p><span class="yr">Completed 2024</span></div>
+    <div class="head"><p>Credentials</p><h2>Qualified and certified</h2></div>
+    <div class="body">
+      <div class="cols2">
+        <div class="card"><h3>BSc Electrical Engineering</h3><p><a href="https://gift.edu.pk/" target="_blank" rel="noopener">GIFT University</a>, Pakistan</p><span class="yr">Graduated 2023</span></div>
+        <div class="card"><h3>OTHM Level 6 Diploma, Occupational Health &amp; Safety</h3><p>Ofqual regulated qualification, United Kingdom</p><span class="yr">Completed 2024</span></div>
+      </div>
+      <div class="pec">Registered Electrical Engineer, Pakistan Engineering Council: <span>Reg. No. ELEC/105324</span></div>
+
+      <h3 class="sub">Certifications</h3>
+      <ul class="tags">
+        <li>OSHA 30-Hour Construction Safety</li><li>IOSH Managing Safely</li><li>ISO 9001:2015 QMS</li>
+        <li>LeanPM Black Belt</li><li>LeanPM Green Belt</li><li>LeanPM Yellow Belt</li>
+        <li>Six Sigma Black Belt, Project Management</li><li>Google Project Management Fundamentals</li>
+        <li>Confined Space Safety</li><li>Fire Safety</li><li>Electrical Safety</li><li>Work at Height</li><li>First Aid &amp; CPR</li>
+      </ul>
+
+      <h3 class="sub">Skills, software and standards</h3>
+      <div class="skills">
+        <ul><li>LV and MV power distribution</li><li>Switchgear and transformer systems</li><li>MDB, SMDB and distribution boards</li><li>ATS and generator systems</li><li>Grounding and lightning protection</li></ul>
+        <ul><li>Inspection Test Plans (ITP)</li><li>Inspection and Material Inspection Requests</li><li>Method statements</li><li>QA/QC documentation</li><li>As-built and handover documentation</li></ul>
+        <ul><li>AutoCAD and Navisworks</li><li>Proteus and Multisim</li><li>Microsoft Office</li><li>Saudi Aramco and SEC standards</li><li>IEC, IEEE, NFPA, NEC, SBC</li></ul>
+      </div>
+
+      <h3 class="sub">Languages</h3>
+      <ul class="langs">
+        <li><b>Urdu</b> <span>native</span></li>
+        <li><b>English</b> <span>professional</span></li>
+        <li><b>Arabic</b> <span>basic</span></li>
+      </ul>
     </div>
-    <div class="pec">Registered Electrical Engineer, Pakistan Engineering Council: <span>Reg. No. ELEC/105324</span></div>
-
-    <h3 class="sub">Certifications</h3>
-    <ul class="tags">
-      <li>OSHA 30-Hour Construction Safety</li><li>IOSH Managing Safely</li><li>ISO 9001:2015 QMS</li>
-      <li>LeanPM Black Belt</li><li>LeanPM Green Belt</li><li>LeanPM Yellow Belt</li>
-      <li>Six Sigma Black Belt, Project Management</li><li>Google Project Management Fundamentals</li>
-      <li>Confined Space Safety</li><li>Fire Safety</li><li>Electrical Safety</li><li>Work at Height</li><li>First Aid &amp; CPR</li>
-    </ul>
-
-    <h3 class="sub">Skills, software and standards</h3>
-    <div class="skills">
-      <ul>
-        <li>LV and MV power distribution</li><li>Switchgear and transformer systems</li><li>MDB, SMDB and distribution boards</li><li>ATS and generator systems</li><li>Grounding and lightning protection</li>
-      </ul>
-      <ul>
-        <li>Inspection Test Plans (ITP)</li><li>Inspection and Material Inspection Requests</li><li>Method statements</li><li>QA/QC documentation</li><li>As-built and handover documentation</li>
-      </ul>
-      <ul>
-        <li>AutoCAD and Navisworks</li><li>Proteus and Multisim</li><li>Microsoft Office</li><li>Saudi Aramco and SEC standards</li><li>IEC, IEEE, NFPA, NEC, SBC</li>
-      </ul>
-    </div>
-
-    <h3 class="sub">Languages</h3>
-    <ul class="langs">
-      <li><b>Urdu</b> <span>native</span></li>
-      <li><b>English</b> <span>professional</span></li>
-      <li><b>Arabic</b> <span>basic</span></li>
-    </ul>
   </div>
 </section>
 
 <section id="contact">
   <div class="wrap">
-    <h2>Contact</h2>
-    <div class="contact-list">
+    <div class="head"><p>Contact</p><h2>Let's discuss your project</h2></div>
+    <div class="body contact-list">
       <a class="c" href="mailto:eengg.mustafa@gmail.com"><small>Email</small><strong>eengg.mustafa@gmail.com</strong></a>
       <a class="c" href="tel:+966531295136"><small>Phone</small><strong>+966 531 295 136</strong></a>
       <a class="c" href="https://wa.me/966531295136" target="_blank" rel="noopener"><small>WhatsApp</small><strong>Chat on WhatsApp</strong></a>
@@ -289,8 +301,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 </footer>
 
 <div class="fab">
-  <a href="https://wa.me/966531295136" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
+  <a class="wa" href="https://wa.me/966531295136" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
   <a href="mailto:eengg.mustafa@gmail.com" aria-label="Send an email">
     <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
